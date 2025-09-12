@@ -17,7 +17,6 @@ interface StatsBarProps {
   displayOptions: {
     currentTime: boolean;
     currentOnline: boolean;
-    regionOverview: boolean;
     trafficOverview: boolean;
     networkSpeed: boolean;
   };
@@ -90,21 +89,7 @@ export const StatsBar = ({
             </div>
           )
         );
-      case "regionOverview":
-        return (
-          displayOptions.regionOverview && (
-            <div className="w-full py-1" key="regionOverview">
-              <div className="flex flex-col gap-2">
-                <label className="text-secondary-foreground text-sm">
-                  点亮地区
-                </label>
-                <label className="font-medium -mt-2 text-md">
-                  {loading ? "..." : stats.uniqueRegions}
-                </label>
-              </div>
-            </div>
-          )
-        );
+      // 已删除"点亮地区"版块
       case "trafficOverview":
         return (
           displayOptions.trafficOverview && (
@@ -191,18 +176,7 @@ export const StatsBar = ({
                 }
               />
             </DropdownMenuItem>
-            <DropdownMenuItem className="flex items-center justify-between cursor-pointer">
-              <span>点亮地区</span>
-              <Switch
-                checked={displayOptions.regionOverview}
-                onCheckedChange={(checked) =>
-                  setDisplayOptions({
-                    ...displayOptions,
-                    regionOverview: checked,
-                  })
-                }
-              />
-            </DropdownMenuItem>
+            {/* 已移除点亮地区选项 */}
             <DropdownMenuItem className="flex items-center justify-between cursor-pointer">
               <span>流量概览</span>
               <Switch
