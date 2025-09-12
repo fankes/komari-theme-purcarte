@@ -8,7 +8,6 @@ import {
 import type { NodeWithStatus } from "@/types/node";
 import { Link } from "react-router-dom";
 import { CpuIcon, MemoryStickIcon, HardDriveIcon } from "lucide-react";
-import Flag from "./Flag";
 import { Tag } from "../ui/tag";
 import { useNodeCommons } from "@/hooks/useNodeCommons";
 import { ProgressBar } from "../ui/progress-bar";
@@ -48,7 +47,6 @@ export const NodeCard = ({
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <Link to={`/instance/${node.uuid}`}>
           <div className="flex items-center gap-2">
-            <Flag flag={node.region}></Flag>
             <img
               src={getOSImage(node.os)}
               alt={node.os}

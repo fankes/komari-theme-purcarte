@@ -9,7 +9,6 @@ import Instance from "./Instance";
 const LoadCharts = lazy(() => import("./LoadCharts"));
 const PingChart = lazy(() => import("./PingChart"));
 import Loading from "@/components/loading";
-import Flag from "@/components/sections/Flag";
 import { useAppConfig } from "@/config";
 import { useIsMobile } from "@/hooks/useMobile";
 
@@ -119,7 +118,6 @@ const InstancePage = () => {
             <ArrowLeft />
           </Button>
           <div className="flex items-center gap-2 min-w-0">
-            <Flag flag={node.region}></Flag>
             <span className="text-xl md:text-2xl font-bold">{node.name}</span>
           </div>
           <span className="text-sm text-secondary-foreground flex-shrink-0">

@@ -2,7 +2,6 @@ import { formatBytes, formatTrafficLimit, formatUptime } from "@/utils";
 import type { NodeWithStatus } from "@/types/node";
 import { Link } from "react-router-dom";
 import { CpuIcon, MemoryStickIcon, HardDriveIcon } from "lucide-react";
-import Flag from "./Flag";
 import { Tag } from "../ui/tag";
 import { useNodeCommons } from "@/hooks/useNodeCommons";
 import { CircleProgress } from "../ui/progress-circle";
@@ -44,9 +43,8 @@ export const NodeListItem = ({
           : "striped-bg-red-translucent-diagonal ring-2 ring-red-500/50"
       } text-secondary-foreground transition-colors duration-200`}>
       <div className="col-span-2 flex items-center text-left">
-        <Flag flag={node.region} />
         <Link to={`/instance/${node.uuid}`}>
-          <div className="ml-2 w-full">
+          <div className="w-full">
             <div className="text-base font-bold">{node.name}</div>
             <Tag className="text-xs" tags={tagList} />
             <div className="flex text-xs">
