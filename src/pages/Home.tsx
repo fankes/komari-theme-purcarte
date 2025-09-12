@@ -136,8 +136,8 @@ const HomePage: React.FC<HomePageProps> = ({ searchTerm, setSearchTerm }) => {
 
       <main className="flex-1 px-4 pb-4">
         {enableGroupedBar && (
-          <div className="flex purcarte-blur theme-card-style overflow-auto whitespace-nowrap overflow-x-auto items-center min-w-[300px] text-secondary-foreground space-x-4 px-4 mb-4">
-            <span>分组</span>
+          <div className="flex purcarte-blur theme-card-style overflow-auto whitespace-nowrap overflow-x-auto items-center min-w-[300px] text-secondary-foreground space-x-2 px-4 py-3 mb-4">
+            <span className="mr-4">分组</span>
             {groups.map((group: string) => (
               <Button
                 key={group}
