@@ -12,6 +12,11 @@ interface OSConfig {
 // 操作系统匹配组
 const osConfigs: OSConfig[] = [
   {
+    name: "Android",
+    image: "/assets/os-android.svg",
+    keywords: ["android", "lineage", "lineageos", "aosp", "android os"],
+  },
+  {
     name: "Alibaba",
     image: "/assets/os-alibaba.svg",
     keywords: ["alibaba"],
