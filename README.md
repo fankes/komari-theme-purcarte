@@ -74,7 +74,7 @@
 | 启用 localStorage 配置 | `enableLocalStorage` | `switch` | `true` | 启用后将优先使用用户浏览器本地配置的视图和外观设置。关闭后将强制使用下方的主题配置，本地可调整但刷新即恢复 |
 | 默认展示视图 | `selectedDefaultView` | `select` | `grid` | 设置默认展示视图为网格或表格 |
 | 默认外观 | `selectedDefaultAppearance` | `select` | `system` | 设置默认外观为浅色、深色或系统主题 |
-| 状态卡片显示控制 | `statusCardsVisibility` | `string` | `currentTime:true,currentOnline:true,regionOverview:true,trafficOverview:true,networkSpeed:true` | 控制状态卡片的显示与隐藏，格式为 卡片名称:显示状态（true/false），多个卡片使用逗号分隔，支持的卡片名称包括 currentTime（当前时间）, currentOnline（当前在线）, regionOverview（点亮地区）, trafficOverview（流量概览）, networkSpeed（网络速率） |
+| 状态卡片显示控制 | `statusCardsVisibility` | `string` | `currentTime:true,currentOnline:true,trafficOverview:true,networkSpeed:true` | 控制状态卡片的显示与隐藏，格式为 卡片名称:显示状态（true/false），多个卡片使用逗号分隔，支持的卡片名称包括 currentTime（当前时间）, currentOnline（当前在线）, trafficOverview（流量概览）, networkSpeed（网络速率） |
 
 #### 标题栏设置
 

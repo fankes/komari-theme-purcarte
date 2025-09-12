@@ -104,8 +104,8 @@
                 "key": "statusCardsVisibility",
                 "name": "状态卡片显示控制",
                 "type": "string",
-                "default": "currentTime:true,currentOnline:true,regionOverview:true,trafficOverview:true,networkSpeed:true",
-                "help": "控制状态卡片的显示与隐藏，格式为 卡片名称:显示状态（true/false），多个卡片使用逗号分隔，支持的卡片名称包括 currentTime（当前时间）, currentOnline（当前在线）, regionOverview（点亮地区）, trafficOverview（流量概览）, networkSpeed（网络速率）"
+                "default": "currentTime:true,currentOnline:true,trafficOverview:true,networkSpeed:true",
+                "help": "控制状态卡片的显示与隐藏，格式为 卡片名称:显示状态（true/false），多个卡片使用逗号分隔，支持的卡片名称包括 currentTime（当前时间）, currentOnline（当前在线）, trafficOverview（流量概览）, networkSpeed（网络速率）"
             },
             {
                 "name": "标题栏设置",
