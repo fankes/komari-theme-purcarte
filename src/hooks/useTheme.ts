@@ -47,7 +47,6 @@ export interface ThemeContextType {
   statusCardsVisibility: {
     currentTime: true;
     currentOnline: true;
-    regionOverview: true;
     trafficOverview: true;
     networkSpeed: true;
   };
@@ -67,7 +66,6 @@ export const ThemeContext = createContext<ThemeContextType>({
   statusCardsVisibility: {
     currentTime: true,
     currentOnline: true,
-    regionOverview: true,
     trafficOverview: true,
     networkSpeed: true,
   },
