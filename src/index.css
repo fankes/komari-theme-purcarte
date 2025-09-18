@@ -83,7 +83,7 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #fafafa;
   --card: var(--card-dark, #17171780);
   --card-foreground: #fafafa;
@@ -140,6 +140,11 @@
     --purcarte-card-color: var(--card-dark);
   }
 
+  /* 深色模式下的卡片/面板背景色 */
+  .dark {
+    --card-dark: rgba(30, 30, 30, 0.8);
+  }
+
   .purcarte-blur {
     @apply bg-(--purcarte-card-color)! backdrop-blur-(--purcarte-blur)!;
   }
@@ -164,6 +169,11 @@
 
   .theme-card-style {
     @apply rounded-lg shadow-sm shadow-(color:--accent-12)/20 box-border border border-(--accent-12)/25;
+  }
+
+  /* 深色模式下的卡片样式 */
+  .dark .theme-card-style {
+    @apply shadow-sm shadow-white/10 border-white/20;
   }
 
   .theme-text-muted {

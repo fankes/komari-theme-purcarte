@@ -1,4 +1,4 @@
-import { StrictMode, useState, lazy, Suspense } from "react";
+import { StrictMode, useState, lazy, Suspense, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
@@ -28,6 +28,16 @@ export const AppContent = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const enableVideoBackground = useConfigItem("enableVideoBackground");
   const videoBackgroundUrl = useConfigItem("videoBackgroundUrl");
+
+  // 动态设置 HTML 根元素的 dark 类
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    if (appearance === "dark") {
+      htmlElement.classList.add("dark");
+    } else {
+      htmlElement.classList.remove("dark");
+    }
+  }, [appearance]);
 
   return (
     <>
