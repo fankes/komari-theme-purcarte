@@ -179,6 +179,15 @@
   .theme-text-muted {
     @apply text-(--theme-text-muted-color);
   }
+
+  /* 深色模式下的单色系统图标样式 */
+  .os-icon-mono {
+    transition: filter 0.2s ease-in-out;
+  }
+
+  .dark .os-icon-mono {
+    filter: brightness(0) invert(1);
+  }
 }
 
 /* 背景图片伪元素 */

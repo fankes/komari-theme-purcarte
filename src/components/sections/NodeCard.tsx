@@ -3,6 +3,7 @@ import {
   formatBytes,
   formatUptime,
   getOSImage,
+  isOSIconMonochrome,
   formatTrafficLimit,
 } from "@/utils";
 import type { NodeWithStatus } from "@/types/node";
@@ -50,7 +51,9 @@ export const NodeCard = ({
             <img
               src={getOSImage(node.os)}
               alt={node.os}
-              className="w-6 h-6 object-contain"
+              className={`w-6 h-6 object-contain ${
+                isOSIconMonochrome(node.os) ? "os-icon-mono" : ""
+              }`}
               loading="lazy"
             />
             <CardTitle className="text-base font-bold">{node.name}</CardTitle>
